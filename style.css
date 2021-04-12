@@ -128,17 +128,6 @@ nav a{
     margin-left: 5%;
 
 }
-.descriptionpizzas{
-    margin-left: 5%;
-    font-family: 'Red Hat Display', sans-serif;
-    font-size: 24px;
-}
-.complementostitulo{
-    font-family: 'Red Hat Display', sans-serif;
-    font-size: 50px;
-    margin-left: 5%;
-
-}
 .camisetas{
     /*
     display: grid;
@@ -149,7 +138,6 @@ nav a{
     
     
 }
-
 
 .main-camiseta {
     width: 387px;
@@ -411,7 +399,7 @@ p:hover > a:hover {
     left: 20px;
     top: 20px;
 }
-.main-pizza:hover {
+.main-camiseta:hover {
     transform: scale(1.1);
   }
 .hoverclientes:hover{
