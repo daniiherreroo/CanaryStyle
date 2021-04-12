@@ -122,7 +122,7 @@ nav a{
     color: white;
     font-size: 20px;
 }
-.pizzastitulo{
+.camisetastitulo{
     font-family: 'Red Hat Display', sans-serif;
     font-size: 72px;
     margin-left: 5%;
@@ -139,7 +139,7 @@ nav a{
     margin-left: 5%;
 
 }
-.pizzas{
+.camisetas{
     /*
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -151,7 +151,7 @@ nav a{
 }
 
 
-.main-pizza {
+.main-camiseta {
     width: 387px;
     height: 283px;
     
@@ -159,7 +159,7 @@ nav a{
     border-radius: 10px;
     margin-top: 1em;
 }
-.main-pizza > img{
+.main-camiseta > img{
     width: 387px;
     height: 208px;
     left: 203px;
@@ -170,16 +170,16 @@ nav a{
    
 }
 
-.pizza-text{
+.camiseta-text{
     font-size: 36px;
     margin-top: 12px;
 }
 
-.pizza-title {
+.camiseta-title {
     margin-left: 0.5em;
 }
 
-.pizza-price {
+.camiseta-price {
     margin-right: 1em;
 }
 
@@ -202,8 +202,8 @@ nav a > i{
 nav li > ul.dropdown {
     position: absolute;
     display: none;
-    width: 200px;
-    height: 111px;
+    width: 120px;
+    height: 130px;
     background:  #52a7f7;
     padding-top: 0;
 }
@@ -215,7 +215,7 @@ nav li > ul.dropdown li {
 }
 
 nav li > ul.dropdown li a {
-    text-align: end;
+    text-align: center;
     font-size: 17px;
     color: white;
     display: block;
