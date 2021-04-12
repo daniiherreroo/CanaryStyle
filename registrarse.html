@@ -41,11 +41,16 @@
     </header>
     <section>
         <form action="#" method="post">
-            <p>Nombre: <input class="nombre" type="text" name="nombre" required autofocus/></p>
+            <p>Nombre: <input class="nombre" type="text" name="nombre" pattern="\D+" required autofocus/></p>
             <p>Email: <input class="email" type="email" name="correo" required/></p>
-            <p>Username: <input class="email" type="email" name="correo" required/></p>
-            <p>Contraseña: <input class="Passwd" type="password" name="pass"required/></p>
-            <p>Repita Contraseña: <input class="Passwd" type="password" name="pass"required/></p>
+            <p>DNI: <input class="dni" type="text" name="dni" pattern="\d{8}[A-Z]" required/></p>
+            <p>Username: <input class="email" type="text" name="username" pattern="\w+" required/></p>
+            <p>Contraseña: <input class="Passwd" type="password" name="pass" pattern="\w+" required/></p>
+            <p>Repita Contraseña: <input class="Passwd2" type="password" name="pass2" pattern="\w+" required/></p>
+            <p>Direccion: <input class="Direccion" type="text" name="direcion" pattern="\w{+}" required/></p>
+            <p>Codigo postal: <input class="Postal" type="text" name="postal" pattern="\d{5}" required/></p>
+            <p>Telefono: <input class="Telefono" type="text" name="telefono" pattern="\d{9}" required/></p>
+            <p><label><input class="Condicion" type="checkbox" name="condicion" required/>Acepto las condiciones</label></p>
 
             <p>
                 <input class="boton" type="submit" value="Registrar"/>
