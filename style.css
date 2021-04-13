@@ -374,8 +374,8 @@ p:hover > a:hover {
 }
 
 .pizza-img > img {
-    width: 100%;
-    height: auto;
+    width: 500px;
+    height: 600px;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
     -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.5);
     box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.5);
@@ -383,7 +383,7 @@ p:hover > a:hover {
 
 .tamañoproducto > p, .masaproducto > p, .cantidadproducto > p, .precioproducto > p {
     margin: 1em 0 0 0;
-    font-size: 20px;
+    font-size: 32px;
 }
 
 .tabla{
@@ -426,6 +426,7 @@ p:hover > a:hover {
     border-radius:20px;
     background-color:grey;
     margin:auto;
+    margin-top: 20px;
 }
 
 .login {
