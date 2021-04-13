@@ -141,7 +141,7 @@ nav a{
 
 .main-camiseta {
     width: 387px;
-    height: 508px;
+    height: 558px;
     
     background: #71b2f0;
     border-radius: 10px;
@@ -159,7 +159,7 @@ nav a{
 }
 
 .camiseta-text{
-    font-size: 36px;
+    font-size: 32px;
     margin-top: 12px;
 }
 
