@@ -15,6 +15,10 @@ header img{
     background-color: #f0f0f0;
     justify-content: center;
 }
+.portada > img{
+    width: fit-content;
+    
+}
 
 .caption {
     background-color: #008705;
