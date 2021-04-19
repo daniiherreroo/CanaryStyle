@@ -16,8 +16,8 @@ header img{
     justify-content: center;
 }
 .portada > img{
-    width: fit-content;
-    
+    width: 100%;
+
 }
 
 .caption {
