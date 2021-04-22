@@ -82,7 +82,7 @@ article > aside.portada-aside > img {
 }
 
 .nav-wrap{
-    position: sticky;
+    
     top: 0;
     width: 100%;
     height: 60px;
@@ -110,9 +110,9 @@ article > aside.portada-aside > img {
 
 nav{
     position: relative;
-    float: right;
-    max-width: 60%;
-    width: 25%;
+    float:right;
+    max-width: 50%;
+    width: 35%;
 }
 
 nav ul {
