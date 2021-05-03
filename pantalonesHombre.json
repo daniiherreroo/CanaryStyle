@@ -1,0 +1,50 @@
+[
+    {
+        "nombre": "Vaquero1",
+        "id": "CH1",
+        "precio": "7,5€",
+        "source": "images/FotosHombres/Camisetas/camiseta1.jpg",
+        "html": ""
+        
+    },
+    {
+        "nombre": "Pantalon2",
+        "id": "CH2",
+        "precio": "7,60€",
+        "source": "images/FotosHombres/Camisetas/camiseta2.jpg",
+        "html": ""
+        
+    },
+    {
+        "nombre": "Pantalon3",
+        "id": "CH3",
+        "precio": "7,50€",
+        "source": "images/FotosHombres/Camisetas/camiseta3.jpg",
+        "html": ""
+        
+    },
+    {
+        "nombre": "Camiseta4",
+        "id": "CH4",
+        "precio": "7,60€",
+        "source": "images/FotosHombres/Camisetas/camiseta4.jpg",
+        "html": ""
+        
+    },
+    {
+        "nombre": "Camiseta5",
+        "id": "CH5",
+        "precio": "8,50€",
+        "source": "images/FotosHombres/Camisetas/camiseta5.jpg",
+        "html": ""
+        
+    },
+    {
+        "nombre": "Camiseta6",
+        "id": "CH6",
+        "precio": "7,60€",
+        "source": "images/FotosHombres/Camisetas/camiseta6.jpg",
+        "html": ""
+        
+    }
+]
