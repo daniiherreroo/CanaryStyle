@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>CanaryStyle | HOME</title>
 </head>
 <body>
@@ -26,7 +28,7 @@
                             <li><a href="pantalonesHombre.html">Pantalones</a></li>
                             <li><a href="chaquetasHombre.html">Chaquetas</a></li>
                             <li><a href="bañadoresHombre.html">Bañadores</a></li>
-                            <li><a href="complementoshombre.html">Complementos</a></li>
+                            <li><a href="complementosHombre.html">Complementos</a></li>
                             
                         </ul></li>
                     <li><a href="#" class="align">Mujer<i class="fa fa-caret-down"></i></a>
@@ -43,102 +45,13 @@
                 </ul>
             </nav>
         </div>
+    </header>    
         <h1 class="camisetastitulo">Complementos</h1>
         <div class="center-camisetas">
-            <div class="camisetas">
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-camiseta"  onclick="window.location='camiseta.html'">
-                            <img  src="images/FotosMujeres/Complementos/camplemento1.jpg" alt="complemento-img1" />
-                            
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'><a href="">Collar de coral</a> </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">10€</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Complementos/complemento2.jpg" alt="complemento-img2" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Collar azul</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">4,90€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Complementos/complemento3.jpg" alt="complemento-img3" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Collar de cascabel</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">16,50€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Complementos/complemento4.jpg" alt="complemento-img4" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Collar dorado</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">20€</p>
-                                </div>
-                            </div>
-                                
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Complementos/complemento5.jpg" alt="complemento-img5" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Pendientes de coral</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">25,50€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Complementos/complemento6.jpg" alt="complemento-img6" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Gafas</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">14€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            
+            <div id="complementosMujerId" class="camisetas">
             </div>
         </div>
     
-</body>
-
 <footer>
     <div class="footer-img">
         <img src="images/instagram.png" alt="instagram" class="instagram">
@@ -157,4 +70,40 @@
         </div>
     </div>
 </footer>
+<script>
+    var interval;
+    var fila = 3;
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            fila = 1
+            //cargarCatalogo(1,fila)
+        } else {
+            fila = 2
+            getDatos(10,fila)
+            //cargarCatalogo(1,fila)
+        }
+        getDatos(10,fila)
+        interval = setInterval(getDatos, 10000, 1,fila)
+    }
+
+    function myFunctionY(y) {
+        if (y.matches) { // If media query matches
+            fila = 0
+            //cargarCatalogo(1,fila)
+        } else {
+            fila = 1     
+            //cargarCatalogo(1,fila)
+        }
+        getDatos(10,fila)
+        interval = setInterval(getDatos, 10,1,fila)
+    }
+    
+    var x = window.matchMedia("(min-width : 890px) and (max-width : 1310px)")
+    var y = window.matchMedia("(max-width: 889px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
+    myFunctionY(y)
+    y.addListener(myFunctionY)   
+</script>
+</body>
 </html>

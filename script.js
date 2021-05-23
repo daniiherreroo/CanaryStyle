@@ -25,7 +25,11 @@ function getDatos(show,max,id){
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             let datos = JSON.parse(this.responseText)
+<<<<<<< HEAD
             if(show != 10){
+=======
+            if(show != 11){
+>>>>>>> 833d18841bfdbc11be32bdefe39fd2173158580a
                 cargarJSON(datos,show,max)
                 console.log(datos)
             }else{

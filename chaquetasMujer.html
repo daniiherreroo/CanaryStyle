@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Canary | HOME</title>
 </head>
 <body>
@@ -43,100 +45,14 @@
                 </ul>
             </nav>
         </div>
+    </header>
         <h1 class="camisetastitulo">Chaquetas</h1>
         <div class="center-camisetas">
-            <div class="camisetas">
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-camiseta" >
-                            <img  src="images/FotosMujeres/Sudaderas/sudadera1.jpg" alt="sudaderas-img1" />                            
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'><a href="">Blanca Yale University</a> </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">18,99€</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Sudaderas/sudadera2.jpg" alt="sudaderas-img2" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Blanca Mafalla</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">12,99€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Sudaderas/sudadera3.jpg" alt="sudaderas-img3" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Gris con Ojo</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">19,99€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Sudaderas/sudadera4.jpg" alt="sudaderas-img4" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Sudadera Chaleco Beige</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">25,99€</p>
-                                </div>
-                            </div>
-                                
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Sudaderas/sudadera5.jpg" alt="sudaderas-img5" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Bella Salmon</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">16,99€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosMujeres/Sudaderas/sudadera6.jpg" alt="sudaderas-img6" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Nascita di Venere</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">29,99€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            
+            <div id="chaquetasMujerId" class="camisetas">                            
             </div>
         </div>
     
-</body>
+
 
 <footer>
     <div class="footer-img">
@@ -156,4 +72,41 @@
         </div>
     </div>
 </footer>
+<script>
+    var interval;
+    var fila = 3;
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            fila = 1
+            
+            //cargarCatalogo(1,fila)
+        } else {
+            fila = 2
+            getDatos(8,fila)
+            //cargarCatalogo(1,fila)
+        }
+        getDatos(8,fila)
+        interval = setInterval(getDatos, 10000, 1,fila)
+    }
+
+    function myFunctionY(y) {
+        if (y.matches) { // If media query matches
+            fila = 0
+            //cargarCatalogo(1,fila)
+        } else {
+            fila = 1     
+            //cargarCatalogo(1,fila)
+        }
+        getDatos(8,fila)
+        interval = setInterval(getDatos, 1,1,fila)
+    }
+    
+    var x = window.matchMedia("(min-width : 890px) and (max-width : 1310px)")
+    var y = window.matchMedia("(max-width: 889px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
+    myFunctionY(y)
+    y.addListener(myFunctionY)   
+</script>
+</body>
 </html>

@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Canary | CHAQUETAS</title>
 </head>
 <body>
@@ -43,118 +45,66 @@
                 </ul>
             </nav>
         </div>
+    </header>    
         <h1 class="camisetastitulo">Chaquetas</h1>
         <div class="center-camisetas">
-            <div class="camisetas">
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosHombres/Chaquetas/chaqueta1.jpg" alt="chaqueta-img1" />
-                            
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'><a href="">Vaquera claro</a> </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">40,50€</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosHombres/Chaquetas/chaqueta2.jpg" alt="chaqueta-img2" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Vaquera bicolor</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">60,00€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosHombres/Chaquetas/chaqueta3.jpg" alt="chaqueta-img3" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Cuero negro</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">79,99€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosHombres/Chaquetas/chaqueta4.jpg" alt="chaqueta-img4" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Vaquera gris</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">30,60€</p>
-                                </div>
-                            </div>
-                                
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosHombres/Chaquetas/chaqueta5.jpg" alt="chaqueta-img5" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Beige</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">20,00€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-camiseta">
-                            <img  src="images/FotosHombres/Chaquetas/chaqueta6.jpg" alt="chaqueta-img6" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='camiseta-text camiseta-title'>Nasa Negra/Blanca</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="camiseta-price camiseta-text">49,99€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            
+            <div id="chaquetasHombreId" class="camisetas">
             </div>
         </div>
-    
+
+    <footer>
+        <div class="footer-img">
+            <img src="images/instagram.png" alt="instagram" class="instagram">
+            <img src="images/maps.png" alt="maps" class="maps">
+            <img src="images/phone.png" alt="phone" class="phone">
+            <img src="images/twitter.png" alt="twitter" class="twitter">
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-terms">
+                <a href="contacto.html">Contacto</a>
+                <a href="#">Términos y condiciones</a>
+            </div>
+
+            <div class="footer-copy">
+                © 2021 CanaryStyle
+            </div>
+        </div>
+    </footer>
+    <script>
+        var interval;
+        var fila = 3;
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                fila = 1
+                
+                //cargarCatalogo(1,fila)
+            } else {
+                fila = 2
+                getDatos(3,fila)
+                //cargarCatalogo(1,fila)
+            }
+            getDatos(3,fila)
+            interval = setInterval(getDatos, 10000, 1,fila)
+        }
+
+        function myFunctionY(y) {
+            if (y.matches) { // If media query matches
+                fila = 0
+                //cargarCatalogo(1,fila)
+            } else {
+                fila = 1     
+                //cargarCatalogo(1,fila)
+            }
+            getDatos(3,fila)
+            interval = setInterval(getDatos, 10,1,fila)
+        }
+        
+        var x = window.matchMedia("(min-width : 890px) and (max-width : 1310px)")
+        var y = window.matchMedia("(max-width: 889px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+        myFunctionY(y)
+        y.addListener(myFunctionY)   
+    </script>
 </body>
-
-<footer>
-    <div class="footer-img">
-        <img src="images/instagram.png" alt="instagram" class="instagram">
-        <img src="images/maps.png" alt="maps" class="maps">
-        <img src="images/phone.png" alt="phone" class="phone">
-        <img src="images/twitter.png" alt="twitter" class="twitter">
-    </div>
-    <div class="footer-bottom">
-        <div class="footer-terms">
-            <a href="contacto.html">Contacto</a>
-            <a href="#">Términos y condiciones</a>
-        </div>
-
-        <div class="footer-copy">
-            © 2021 CanaryStyle
-        </div>
-    </div>
-</footer>
 </html>
